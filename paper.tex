@@ -74,15 +74,28 @@
 
 \section{Online Concepts}
 
+Programming with online concepts mean working with the active robot and its controls. %(TODO cite Grundlagen der Robotik Seite 186)
+This concept is used to give a robot a new set of skills in a fast and easy way, where the programmer has the chance to observe the resulting behavior directly. %(TODO cite " Seite 187)
+Commonly used concepts are Teach-in-Programming and Master-Slave-Programming.
+
 %general information about online concepts
 
-    \subsection{Playback}
-    \subsection{Master-Slave}
     \subsection{Teach-in}
-    \subsection{CAD/graphical based}
+    With Teach-in-Programming the programmer teaches the robot needed sequences of movements. Therefore the programmer moves the robot via control elements or buttons, so the system can save the needed movements parameters like position, joint coordinates or the state of grippers and "learn".  The movement of the robot can be controlled via consoles or so called "Teach Pendants", handheld programming devices. Usually, due to security, the movements are teached with decreased speed. Later on the program paramters like speed or accuracy can be adjusted to meet the needed specifications. Then the programm can be execute automatically, in which the robot moves through all stored positions one after the other and thus executes the planned sequence of movements. %(TODO cite " Seite 187-188)
+    Usually there are three forms of movements are distinguished:
+    \begin{itemize}
+        \item Point-to-Point
+        \item Continous Path
+        \item Muli-Point
+    \end{itemize}
+
+    Play-back programming is a from of Teach-in-Programming commonly used for Multi-Point. In this the robot is programmed by demonstrating the movement by touch or hand guidance with switched off actuators. Then the robot stores the positions of the joints and interpolates a smooth path with the given points, which can then be traversed as it was shown. %(TODO: cite " Seite 188-189)
+
+    \subsection{Master-Slave}
+    
 
 \section{Offline Concepts}
-
+    \subsection{CAD/graphical based}
     \subsection{text based}
 
         uses problem solving programming languages 
@@ -96,6 +109,7 @@
                 \item Staubli TX
                 \item Adept
                 \item Motoman
+            \end{itemize}
         (b1 p. 113)
 
     
