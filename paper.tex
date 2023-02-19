@@ -89,10 +89,13 @@ Commonly used concepts are Teach-in-Programming and Master-Slave-Programming.
         \item Muli-Point
     \end{itemize}
 
-    Play-back programming is a from of Teach-in-Programming commonly used for Multi-Point. In this the robot is programmed by demonstrating the movement by touch or hand guidance with switched off actuators. Then the robot stores the positions of the joints and interpolates a smooth path with the given points, which can then be traversed as it was shown. %(TODO: cite " Seite 188-189)
+    Play-back programming is for example a special from of Teach-in-Programming commonly used for Multi-Point. In this the robot is programmed by demonstrating the movement by touch or hand guidance with switched off actuators. Then the robot stores the positions of the joints and interpolates a smooth path with the given points, which can then be traversed as it was shown. %(TODO: cite " Seite 188-189)
 
     \subsection{Master-Slave}
-    
+    The Master-Slave-Concept gives the chance to program heavy robots via online programming wihtout having to move them manually. To do this, the programmer needs two coupled robots, a small one that is easy to move and the heavy robot whose capabilities are to be programmed. The programmer moves the small robot, the so called Master. These movements are then copied from the so called Slave, the heavy robot. Because of the need of two coupled robots, this programming concept is usually expensive and therefore only used for teleoperations, so for places humans can not visit easily like under water, irradiated areas or in space. %(TODO cite " Seite 190)
+
+    \subsection{Disadvantages of online programming}
+    Even though online programming makes it possible to specify motion sequences very precisely, this type of robot programming is not useful or even possible for all applications. This concept makes it impossible, for example, to control the program flow beyond the movements, to process sensor data or to perform mathematical calculations. In addition, online programming requires time, which is a great disadvantage within a manufacturing process. Within this time, the robot is withdrawn from the process or possibly the whole process has to be stopped for this time. For such problems, concepts of offline programming are used. %(TODO " Seite 190-191)
 
 \section{Offline Concepts}
     \subsection{CAD/graphical based}
@@ -120,8 +123,7 @@ Commonly used concepts are Teach-in-Programming and Master-Slave-Programming.
 
         (https://new.abb.com/products/robotics/robotstudio)
 
-        some enviroments even make use of ar technologie to show the roboter and its movements in the real world 
-            \end{itemize}
+        some enviroments even make use of ar technologie to show the roboter and its movements in the real world
         
         example robot studio
 
@@ -149,33 +151,33 @@ Commonly used concepts are Teach-in-Programming and Master-Slave-Programming.
 
 \section{Hybrid Concepts}
 
-\section*{Acknowledgment}
+% \section*{Acknowledgment}
 
-The preferred spelling of the word ``acknowledgment'' in America is without 
-an ``e'' after the ``g''. Avoid the stilted expression ``one of us (R. B. 
-G.) thanks $\ldots$''. Instead, try ``R. B. G. thanks$\ldots$''. Put sponsor 
-acknowledgments in the unnumbered footnote on the first page.
+% The preferred spelling of the word ``acknowledgment'' in America is without 
+% an ``e'' after the ``g''. Avoid the stilted expression ``one of us (R. B. 
+% G.) thanks $\ldots$''. Instead, try ``R. B. G. thanks$\ldots$''. Put sponsor 
+% acknowledgments in the unnumbered footnote on the first page.
 
-\section*{References}
+% \section*{References}
 
-Please number citations consecutively within brackets \cite{b1}. The 
-sentence punctuation follows the bracket \cite{b2}. Refer simply to the reference 
-number, as in \cite{b3}---do not use ``Ref. \cite{b3}'' or ``reference \cite{b3}'' except at 
-the beginning of a sentence: ``Reference \cite{b3} was the first $\ldots$''
+% Please number citations consecutively within brackets \cite{b1}. The 
+% sentence punctuation follows the bracket \cite{b2}. Refer simply to the reference 
+% number, as in \cite{b3}---do not use ``Ref. \cite{b3}'' or ``reference \cite{b3}'' except at 
+% the beginning of a sentence: ``Reference \cite{b3} was the first $\ldots$''
 
-Number footnotes separately in superscripts. Place the actual footnote at 
-the bottom of the column in which it was cited. Do not put footnotes in the 
-abstract or reference list. Use letters for table footnotes.
+% Number footnotes separately in superscripts. Place the actual footnote at 
+% the bottom of the column in which it was cited. Do not put footnotes in the 
+% abstract or reference list. Use letters for table footnotes.
 
-Unless there are six authors or more give all authors' names; do not use 
-``et al.''. Papers that have not been published, even if they have been 
-submitted for publication, should be cited as ``unpublished'' \cite{b4}. Papers 
-that have been accepted for publication should be cited as ``in press'' \cite{b5}. 
-Capitalize only the first word in a paper title, except for proper nouns and 
-element symbols.
+% Unless there are six authors or more give all authors' names; do not use 
+% ``et al.''. Papers that have not been published, even if they have been 
+% submitted for publication, should be cited as ``unpublished'' \cite{b4}. Papers 
+% that have been accepted for publication should be cited as ``in press'' \cite{b5}. 
+% Capitalize only the first word in a paper title, except for proper nouns and 
+% element symbols.
 
-For papers published in translation journals, please give the English 
-citation first, followed by the original foreign-language citation \cite{b6}.
+% For papers published in translation journals, please give the English 
+% citation first, followed by the original foreign-language citation \cite{b6}.
 
 \begin{thebibliography}{00}
     \bibitem{b1} Wolfgang Weber, Heiko Koch, ''Industrieroboter Methoden der Steuerung und Regelung'' Carl Hanser Verlag München, 5. Auflage, 2022
