@@ -43,12 +43,15 @@
 \end{abstract}
 
 \begin{IEEEkeywords}
-    robotics, programming, concepts, ai, augmented reality, virtual reality
+    robotics, programming, concepts, ai, augmented reality, virtual reality 
 \end{IEEEkeywords}
 
 \section{Introduction}
   
 \section{Overview of Concepts}
+
+old-fashioned concepts
+widely used in the industry
 
  \begin{itemize}
     \item Online Concepts
@@ -63,14 +66,20 @@
             \item CAD/graphical based
             \item text based
             \item task based
-                \begin{itemize}
-                    \item explicit
-                    \item implicit
-                \end{itemize}
             \item Simulation
         \end{itemize}
     \item Hybrid Concepts
  \end{itemize}    
+
+new or theoretical concepts
+not widely used in the industry, published in scientific papers
+
+\begin{itemize}
+    \item Semantic Robot Programming
+    %\item AI
+    %\item AR
+%\item VR
+\end{itemize}
 
 \section{Online Concepts}
 
@@ -98,8 +107,17 @@ Commonly used concepts are Teach-in-Programming and Master-Slave-Programming.
     Even though online programming makes it possible to specify motion sequences very precisely, this type of robot programming is not useful or even possible for all applications. This concept makes it impossible, for example, to control the program flow beyond the movements, to process sensor data or to perform mathematical calculations. In addition, online programming requires time, which is a great disadvantage within a manufacturing process. Within this time, the robot is withdrawn from the process or possibly the whole process has to be stopped for this time. For such problems, concepts of offline programming are used. %(TODO " Seite 190-191)
 
 \section{Offline Concepts}
+
+    development doesn't take place on an active robot itsself but on a seperate system, indirect programming
+    the program gets loaded onto the robot later on
+
+     (b4 p 186)
+
     \subsection{CAD/graphical based}
     \subsection{text based}
+
+        text based = explicit
+        you tell how to move to accomplish a certain task
 
         uses problem solving programming languages 
         gives access to commands for movements with specific parameters for the specific movement
@@ -115,6 +133,10 @@ Commonly used concepts are Teach-in-Programming and Master-Slave-Programming.
         kuka officelite
         uses krl language %source?
 
+        there are many programming languages to choose from developing using the textual concept
+        based on the 2019 market share of todays biggest robot manufacturers the most commong languages used are KAREL, RAPID, KRL
+        (s1)
+
         in addition to the textual programming features most of the enviroments also offer a graphical programming interface
 
         the main concepts used in these enviroments are controlling the robot by moving its arms on different axis and rotating it on those or to simulate a controller (representation of the ones used in the online concepts)
@@ -127,10 +149,24 @@ Commonly used concepts are Teach-in-Programming and Master-Slave-Programming.
         
         example robot studio
 
+         
+
     
     \subsection{task based}
-        \subsubsection{explicit}
-        \subsubsection{implicit}
+
+        task based = implicit
+        you tell what task to do to achieve a certain goal
+        more abstract than text based, adds a layer of abstraction to the programming workflow
+
+        description of the tasks gets translated into lines of code by a task transformer (b1 p 116)
+
+        uses sensor information to add dynamic to the program while running
+
+        example task based programming enviroment:
+        RoboGuide from FANUC defining by drag and drop
+        Visual Components by flowchart
+        Robotmaster 
+
     \subsection{CAD/graphical based}
 
         uses a 3d scenery viewer which shows the simulated production enviroment
@@ -141,15 +177,38 @@ Commonly used concepts are Teach-in-Programming and Master-Slave-Programming.
 
         
 
-        
-
-        (https://new.abb.com/products/robotics/robotstudio)
-
-        
-
     \subsection{Simulation}
 
 \section{Hybrid Concepts}
+
+    mixing of both offline and online concepts
+    can be done by creating a general program offine and later  fine tune this programm with online concepts on the real robot
+    or the other way around by first programming the robot online and then optimizing the program offline
+    (b4 p 186)
+
+\section{New Concepts} %?
+
+    \subsection{Semantic Robot Programming}
+
+        = programming by demonstrating
+
+        in a paper ... the authors propose a new concept of programming robots by demonstrating the desired behavior to the robot by giving an initial state and a goal state for which the robot has to find the best way to get from the initial state to the goal state
+
+        they use a new scene estimation method called DIGEST which splits the scene into a scene graph representing the scene structure of the initial state
+        only requirement is the information about the number of objects present in the scene
+
+        given now the structure of the initial state and the goal, a task planer to find the best way to get from the initial state to the goal state is used
+
+        the task planer generates a series of actions to accomplish the task
+        (p1 p 2)
+
+    \subsection{AR}
+    
+        (p3)
+
+    \subsection{VR}
+
+        (p2)
 
 % \section*{Acknowledgment}
 
@@ -179,12 +238,13 @@ Commonly used concepts are Teach-in-Programming and Master-Slave-Programming.
 % For papers published in translation journals, please give the English 
 % citation first, followed by the original foreign-language citation \cite{b6}.
 
-\begin{thebibliography}{00}
-    \bibitem{b1} Wolfgang Weber, Heiko Koch, ''Industrieroboter Methoden der Steuerung und Regelung'' Carl Hanser Verlag München, 5. Auflage, 2022
 
-\end{thebibliography} 
-\vspace{12pt}
-\color{red}
-IEEE conference templates contain guidance text for composing and formatting conference papers. Please ensure that all template text is removed from your conference paper prior to submission to the conference. Failure to remove the template text from your paper may result in your paper not being published.
+\nocite{*}
+
+\bibliographystyle{unsrt}
+\bibliography{quellen}
 
 \end{document}
+
+
+%maybe add the statics cited in the text?
