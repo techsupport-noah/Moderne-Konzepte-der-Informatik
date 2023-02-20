@@ -108,73 +108,59 @@ Commonly used concepts are Teach-in-Programming and Master-Slave-Programming.
 
 \section{Offline Concepts}
 
-    development doesn't take place on an active robot itsself but on a seperate system, indirect programming
-    the program gets loaded onto the robot later on
+    Programming with offline concepts means programming the robot without the need to be in direct contact with an active robot. This concept is used to give a robot a new set of skills in an indirect way, without interrupting the overall production process.
+    The finished program gets loaded onto the robot afterwards, resulting in a minimum of downtime of other processes. \cite[p. 186]{b4}
 
-     (b4 p 186)
-
-    \subsection{CAD/graphical based}
     \subsection{text based}
 
-        text based = explicit
-        you tell how to move to accomplish a certain task
+        The concept of text based programming is based on the idea of programming a robot by manually writing source code in the native language of the robot or a language which can be translated into the native ones. The source code containing a set of instructions gets compiled like in any other programming language and the resulting program gets loaded onto the robot. %cite this?
+        This explicit programming approach is one of the oldest and most common programming concepts in robotics. %cite this?
 
-        uses problem solving programming languages 
-        gives access to commands for movements with specific parameters for the specific movement
+        % what are problem solving languages?
+        Most of the programming languages used in robotics are problem-solving languages, which means, that they contain special commands for certain tasks the robot can perform. A basic example would be a command for moving the robot from one point to another. This is commonly done by giving the coordinates of the initial point, a target point and arguments for how to interpolate between those points as parameter to the command. 
+        The robot then calculates the path based on the parameters and moves accordingly. %cite this?
+               
+        Based on the 2019 market share of today's biggest robot manufacturers the most common languages used for text based programming are RAPID, KRL and KAREL. \cite{s1}
 
-        commands mostly define movements from on point to another and how to interpolate between them %source?
+        For those languages many programming environments exist. Examples based on the mentioned would be RobotStudio from ABB, Officelite from KUKA and ROBOGUIDE from FANUC.
+
+        In addition to the textual programming features most of the enviroments also offer a graphical programming interface.
+        The main concepts used in these interfaces are controlling the robot by draggable points or with a simulated controller.
+        The first method works by moving and rotating of for example the robot's arm on different axis. 
+        The second approach is based on simulated controller similar to the ones used in teach-in programming of the robot.
+
+        Some environments even make use of AR technologies to show and simulate the robot running the created program in the real world.
         
-        programming enviroments for text based from the most common robot manufacturers %quote this?
-        
-        examples 
-        abb robot studio
-        uses rapid language %source?
+        %example robot studio %cite this
 
-        kuka officelite
-        uses krl language %source?
-
-        there are many programming languages to choose from developing using the textual concept
-        based on the 2019 market share of todays biggest robot manufacturers the most commong languages used are KAREL, RAPID, KRL
-        (s1)
-
-        in addition to the textual programming features most of the enviroments also offer a graphical programming interface
-
-        the main concepts used in these enviroments are controlling the robot by moving its arms on different axis and rotating it on those or to simulate a controller (representation of the ones used in the online concepts)
-
-        kuka mainly uses the second concept where as abb uses both
-
-        (https://new.abb.com/products/robotics/robotstudio)
-
-        some enviroments even make use of ar technologie to show the roboter and its movements in the real world
-        
-        example robot studio
-
-         
-
-    
     \subsection{task based}
 
-        task based = implicit
-        you tell what task to do to achieve a certain goal
-        more abstract than text based, adds a layer of abstraction to the programming workflow
+        Task based programming is a more abstract and implicit approach to programming a robot.
+        Instead of describing what movement the robot should perform it defines the tasks the robot should perform.
+       
+        In comparison to text based programming it adds a layer of abstraction to the programming workflow. For example wouldn't you have to understand the complex physic when gripping an object any more, you could just use some kind of grip command which does the task for you. %cite
 
-        description of the tasks gets translated into lines of code by a task transformer (b1 p 116)
+        Task based programming typically uses sensor information to add dynamic to the program while running. For example if the robot is supposed to pick up an object whose position is not precisely known, it would first check if the object is in the gripper and if not it would move to the object and pick it up. If the object is already in the gripper it would just move to the next task.
+        %cite
 
-        uses sensor information to add dynamic to the program while running
+        Again there are many different programming environments for task based programming. Some examples are RoboGuide from FANUC and Visual Components. RoboGuide defines tasks by using a drag and drop interface, these task can later be combined to form a program.
+        Visual Components instead defines tasks by a flowchart.
+        %cite
 
-        example task based programming enviroment:
-        RoboGuide from FANUC defining by drag and drop
-        Visual Components by flowchart
-        Robotmaster 
+        The resulting task descriptions get translated into lines of code by a task transformer. These code lines then get processed like in the text based programming approach by compiling it. %cite this?
+
+        
 
     \subsection{CAD/graphical based}
 
-        uses a 3d scenery viewer which shows the simulated production enviroment
+        uses a 3d scenery viewer which shows the simulated production environment
 
         can simulate multiple robots and multiple tasks apart from robot movements
 
         example visual components
 
+        Some environments also offer to include a more mathematical approach to the programming workflow by adding different models and CAT based tools.
+        Models could range from simple models of movements to more complex simulation models of the environment and the robot itself. %TODO cite this
         
 
     \subsection{Simulation}
