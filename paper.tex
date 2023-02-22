@@ -39,11 +39,11 @@
 \maketitle
 
 \begin{abstract}
-    This paper gives an overview of the programming concepts in robotics. It is intended to be used as a general source of information. The paper is structured in a way that the reader get to know a number of concepts one at a time. The paper is concluded with a summary of the programming concepts in robotics.
+    This paper gives an overview of the programming concepts in robotics. It is intended to be used as a general source of information. The paper is structured in a way that the reader get to know a number of concepts one at a time. The concepts are divided into the two categories widely established concepts and modern concepts.
 \end{abstract}
 
 \begin{IEEEkeywords}
-    robotics, programming, concepts, ai, augmented reality, virtual reality 
+    robotics, programming, concepts, AI, augmented reality, virtual reality 
 \end{IEEEkeywords}
 
 \section{Introduction}
@@ -173,7 +173,7 @@ Commonly used examples of online concepts are Teach-in-Programming and Master-Sl
     This could for example be done by creating a general program offline and later  fine tune this program with online concepts on the real robot or the other way around by first programming the robot online and then optimizing the program offline.
     \cite[p. 186]{b4}
 
-\section{Modern Concepts} %?
+\section{Modern Concepts}
 
     \subsection{Semantic Robot Programming}
 
@@ -182,16 +182,16 @@ Commonly used examples of online concepts are Teach-in-Programming and Master-Sl
         Recently the authors of \cite{p1} proposed a new concept of programming robots by demonstrating the desired behaviour to the robot by giving an initial state and a goal state for which the robot has to find the best way to get from the initial state to the goal state
 
         They used a new scene estimation method called DIGEST which splits the scene into a scene graph representing the structure of the initial state. The only parameter needed is the information about the number of objects present in the scene. The scene graph is then used to find the best way to get from the initial state to the goal state.
-        For that a task planner is used which generates a series of actions to accomplish the task. These actions are then executed by the robot. %cite this?
+        For that a task planner is used which generates a series of actions to accomplish the task. These actions are then executed by the robot.
         \cite[p. 2]{p1}
 
     \subsection{AR}
     
         The concept of programming robots by using AR is another new approach to programming robots.
         The general idea of AR is to integrate additional information into the real world. In our specific case this could be an overlay of the robot adding methods to control the robot.
-        The authors of \cite{p3} proposed a concept of how this could be done using a HoloLense from Microsoft.
-        For example did they add the ability to specify a pickup and a place location. This allows for an automatic path generation. The path then gets visualized in the HoloLense display. The user can edit this path by gestures and the movement of the robot can be simulated.
-        If the user is satisfied with the path the robot can be instructed to execute the path with a voice command. %cite this?
+        The authors of \cite{p3} proposed a concept of how this could be done using a HoloLens from Microsoft.
+        For example did they add the ability to specify a pickup and a place location. This allows for an automatic path generation. The path then gets visualized in the HoloLens display. The user can edit this path by gestures and the movement of the robot can be simulated.
+        If the user is satisfied with the path the robot can be instructed to execute the path with a voice command.
         \cite[p. 2]{p3}
 
         They found that the time needed to teach a robot using their AR based method was significantly shorter than with the traditional kinesthetic teaching approach. 
