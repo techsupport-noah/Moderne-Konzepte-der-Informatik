@@ -50,8 +50,7 @@
   
 \section{Overview of Concepts}
 
-old-fashioned concepts
-widely used in the industry
+Widely established concepts:
 
  \begin{itemize}
     \item Online Concepts
@@ -66,13 +65,11 @@ widely used in the industry
             \item CAD/graphical based
             \item text based
             \item task based
-            \item Simulation
         \end{itemize}
     \item Hybrid Concepts
  \end{itemize}    
 
-new or theoretical concepts
-not widely used in the industry, published in scientific papers
+Modern and theoretical concepts:
 
 \begin{itemize}
     \item Semantic Robot Programming
@@ -162,84 +159,63 @@ Commonly used examples of online concepts are Teach-in-Programming and Master-Sl
 
     \subsection{CAD/graphical based}
 
-        uses a 3d scenery viewer which shows the simulated production environment
-
-        can simulate multiple robots and multiple tasks apart from robot movements
-
-        example visual components
-
-        Some environments also offer to include a more mathematical approach to the programming workflow by adding different models and CAT based tools.
+        CAD based programming environments offer a mathematical approach to the programming workflow by adding different models and CAT based tools.
         Models could range from simple models of movements to more complex simulation models of the environment and the robot itself. %TODO cite this
-        
 
-    \subsection{Simulation}
+        %add to this?
+
+        In addition to the pure simulation of mathematical models, graphical based programming environments add a time component to the simulation, making their simulation a 4D scene.
+        They contain a kind of 3D scene viewer and offer the features to simulate not only one robot and its movements but also the whole production environment. This allows the user to simulate the whole production process and interactions between different parts of the production environment. %cite
+
+        An example for a graphical programming environment is Visual Components. %cite
 
 \section{Hybrid Concepts}
 
-    mixing of both offline and online concepts
-    can be done by creating a general program offine and later  fine tune this programm with online concepts on the real robot
-    or the other way around by first programming the robot online and then optimizing the program offline
-    (b4 p 186)
+    Hybrid concepts combine the advantages of both offline and online concepts.
+    This could for example be done by creating a general program offline and later  fine tune this program with online concepts on the real robot or the other way around by first programming the robot online and then optimizing the program offline.
+    \cite[p. 186]{b4}
 
-\section{New Concepts} %?
+\section{Modern Concepts} %?
 
     \subsection{Semantic Robot Programming}
 
-        = programming by demonstrating
+        The concept of semantic programming is a new approach to programming robots based on demonstrating.
 
-        in a paper ... the authors propose a new concept of programming robots by demonstrating the desired behavior to the robot by giving an initial state and a goal state for which the robot has to find the best way to get from the initial state to the goal state
+        Recently the authors of \cite{p1} proposed a new concept of programming robots by demonstrating the desired behaviour to the robot by giving an initial state and a goal state for which the robot has to find the best way to get from the initial state to the goal state
 
-        they use a new scene estimation method called DIGEST which splits the scene into a scene graph representing the scene structure of the initial state
-        only requirement is the information about the number of objects present in the scene
-
-        given now the structure of the initial state and the goal, a task planer to find the best way to get from the initial state to the goal state is used
-
-        the task planer generates a series of actions to accomplish the task
-        (p1 p 2)
+        They used a new scene estimation method called DIGEST which splits the scene into a scene graph representing the structure of the initial state. The only parameter needed is the information about the number of objects present in the scene. The scene graph is then used to find the best way to get from the initial state to the goal state.
+        For that a task planner is used which generates a series of actions to accomplish the task. These actions are then executed by the robot. %cite this?
+        \cite[p. 2]{p1}
 
     \subsection{AR}
     
+
         (p3)
 
     \subsection{VR}
 
         (p2)
 
-% \section*{Acknowledgment}
-
-% The preferred spelling of the word ``acknowledgment'' in America is without 
-% an ``e'' after the ``g''. Avoid the stilted expression ``one of us (R. B. 
-% G.) thanks $\ldots$''. Instead, try ``R. B. G. thanks$\ldots$''. Put sponsor 
-% acknowledgments in the unnumbered footnote on the first page.
-
-% \section*{References}
-
-% Please number citations consecutively within brackets \cite{b1}. The 
-% sentence punctuation follows the bracket \cite{b2}. Refer simply to the reference 
-% number, as in \cite{b3}---do not use ``Ref. \cite{b3}'' or ``reference \cite{b3}'' except at 
-% the beginning of a sentence: ``Reference \cite{b3} was the first $\ldots$''
-
-% Number footnotes separately in superscripts. Place the actual footnote at 
-% the bottom of the column in which it was cited. Do not put footnotes in the 
-% abstract or reference list. Use letters for table footnotes.
-
-% Unless there are six authors or more give all authors' names; do not use 
-% ``et al.''. Papers that have not been published, even if they have been 
-% submitted for publication, should be cited as ``unpublished'' \cite{b4}. Papers 
-% that have been accepted for publication should be cited as ``in press'' \cite{b5}. 
-% Capitalize only the first word in a paper title, except for proper nouns and 
-% element symbols.
-
-% For papers published in translation journals, please give the English 
-% citation first, followed by the original foreign-language citation \cite{b6}.
 
 
+        
 \nocite{*}
 
 \bibliographystyle{unsrt}
 \bibliography{quellen}
 
+
+\cleardoublepage
+\appendix
+
+\section{Appendix}
+    \begin{figure}[htbp!]
+        \centering
+        \includegraphics[scale=0.25]{./Moderne_Konzepte_Quellen/Citavi Attachments/statistic_id317178_global-industrial-robot-market-major-companies-by-market-share-2019.pdf}
+        \caption{Stastic about the market share of the biggest robot manufacturers in 2019 \cite{s1}}
+        \label{fig}
+    \end{figure}
+
 \end{document}
 
 
-%maybe add the statics cited in the text?
