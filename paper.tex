@@ -55,10 +55,9 @@ Widely established concepts:
  \begin{itemize}
     \item Online Concepts
         \begin{itemize}
-            \item Playback
-            \item Master-Slave
             \item Teach-in
-            \item CAD/graphical based
+            \item Master-Slave
+            \item Vision-Based
         \end{itemize}
     \item Offline Concepts
         \begin{itemize}
@@ -67,28 +66,27 @@ Widely established concepts:
             \item task based
         \end{itemize}
     \item Hybrid Concepts
- \end{itemize}    
+ \end{itemize}
 
 Modern and theoretical concepts:
 
 \begin{itemize}
     \item Semantic Robot Programming
-    %\item AI
-    %\item AR
-%\item VR
+    \item AR
+    \item VR
 \end{itemize}
 
 \section{Online Concepts}
 
-Programming with online concepts mean working with the active robot and its controls. %(TODO cite Grundlagen der Robotik Seite 186)
+Programming with online concepts mean working with the active robot and its controls. \cite[p. 186]{b4} %(Grundlagen der Robotik Seite 186)
 This concept is used to give a robot a new set of skills in a fast and easy way, where the programmer has the chance to observe the resulting behavior directly.
-Commonly used examples of online concepts are Teach-in-Programming and Master-Slave-Programming. %(TODO cite " Seite 187)
+Commonly used examples of online concepts are Teach-in-Programming and Master-Slave-Programming. \cite[p. 187]{b4}%(" Seite 187)
 
 %general information about online concepts
 
     \subsection{Teach-in}
         With Teach-in-Programming the programmer teaches the robot needed sequences of movements. Therefore the programmer moves the robot via control elements or buttons, so the system can save the needed movements parameters like position, joint coordinates or the state of grippers and "learn". The movement of the robot can be controlled via consoles or so called "Teach Pendants", handheld programming devices. %(TODO mehr Infos zu Pendant)
-        Usually, due to security, the movements are teached with decreased speed. Later on the program paramters like speed or accuracy can be adjusted to meet the needed specifications. Then the programm can be execute automatically, in which the robot moves through all stored positions one after the other and thus executes the planned sequence of movements. %(TODO cite " Seite 187-188)
+        Usually, due to security, the movements are teached with decreased speed. Later on the program paramters like speed or accuracy can be adjusted to meet the needed specifications. Then the programm can be execute automatically, in which the robot moves through all stored positions one after the other and thus executes the planned sequence of movements. \cite[pp. 187-188]{b4} %(" Seite 187-188)
         Usually there are three forms of movements are distinguished:
         \begin{itemize}
             \item Point-to-Point
@@ -96,21 +94,21 @@ Commonly used examples of online concepts are Teach-in-Programming and Master-Sl
             \item Muli-Point
         \end{itemize}
 
-        Play-back programming is for example a special from of Teach-in-Programming commonly used for Multi-Point. In this the robot is programmed by demonstrating the movement by touch or hand guidance with switched off actuators. Then the robot stores the positions of the joints and interpolates a smooth path with the given points, which can then be traversed as it was shown. %(TODO: cite " Seite 188-189)
+        Play-back programming is for example a special from of Teach-in-Programming commonly used for Multi-Point. In this the robot is programmed by demonstrating the movement by touch or hand guidance with switched off actuators. Then the robot stores the positions of the joints and interpolates a smooth path with the given points, which can then be traversed as it was shown. \cite[pp. 188-189]{b4}%(" Seite 188-189)
 
     \subsection{Master-Slave}
-        The Master-Slave-Concept gives the chance to program heavy robots via online programming wihtout having to move them manually. To do this, the programmer needs two coupled robots, a small one that is easy to move and the heavy robot whose capabilities are to be programmed. The programmer moves the small robot, the so called Master. These movements are then copied from the so called Slave, the heavy robot. Because of the need of two coupled robots, this programming concept is usually expensive and therefore only used for teleoperations, so for places humans can not visit easily like under water, irradiated areas or in space. Since the Slave robot is usually very far away, the current scenario of the Slave is usually transmitted to the operator of the Master by camera. Due to transmission delays, the Slave's environment may change faster than the programmer can track it via the camera. This makes accurate movement corrections very difficult. In such cases, special algorithms are used that estimate the future positions of the Slave to make a nearly synchronous control possible. %(TODO cite Robotik: Programmierung intelligenter Roboter Seite 91)
+        The Master-Slave-Concept gives the chance to program heavy robots via online programming wihtout having to move them manually. To do this, the programmer needs two coupled robots, a small one that is easy to move and the heavy robot whose capabilities are to be programmed. The programmer moves the small robot, the so called Master. These movements are then copied from the so called Slave, the heavy robot. Because of the need of two coupled robots, this programming concept is usually expensive and therefore only used for teleoperations, so for places humans can not visit easily like under water, irradiated areas or in space. Since the Slave robot is usually very far away, the current scenario of the Slave is usually transmitted to the operator of the Master by camera. Due to transmission delays, the Slave's environment may change faster than the programmer can track it via the camera. This makes accurate movement corrections very difficult. In such cases, special algorithms are used that estimate the future positions of the Slave to make a nearly synchronous control possible. \cite[p. 91]{b6}%(Robotik: Programmierung intelligenter Roboter Seite 91)
 
     \subsection{Vision-Based}
-        Another interesting concept that is not so widely used is vision-based programming. Here, the robot is presented with the action it should perform, which is then detected by various sensors and repeated by the robot until the action meets the expected criteria. %(TODO cite Handbuch Robotik Seite 178)
-        In the process, the robot must recognise and interpret the relevant features of the movement and objects it needs to interact with in the process, %(TODO cite A survey of robot programming systems)
-        which makes such a system very complex and computationally intensive. %(TODO cite Industrial robot programming by demonstration)
+        Another interesting concept that is not so widely used is vision-based programming. Here, the robot is presented with the action it should perform, which is then detected by various sensors and repeated by the robot until the action meets the expected criteria. \cite[p. 178]{b5} %(Handbuch Robotik Seite 178)
+        In the process, the robot must recognise and interpret the relevant features of the movement and objects it needs to interact with in the process, \cite[p. 7]{p4} %(A survey of robot programming systems)
+        which makes such a system very complex and computationally intensive. \cite[p. 300]{p5} %(Industrial robot programming by demonstration)
 
     \subsection{Advantages of online programming}
-        A key advantage of online concepts is that no special knowledge in programming is required in order to program the necessary motion sequences into the robot. In addition, the robot is programmed directly in its targeted working environment, so all conditions and possible inaccuracies and disturbance variables can be taken into account directly. %(TODO cite Robotik: Programmierung intelligenter Roboter Seite 92)
+        A key advantage of online concepts is that no special knowledge in programming is required in order to program the necessary motion sequences into the robot. In addition, the robot is programmed directly in its targeted working environment, so all conditions and possible inaccuracies and disturbance variables can be taken into account directly. \cite[p. 92]{b6} %(Robotik: Programmierung intelligenter Roboter Seite 92)
 
     \subsection{Disadvantages of online programming}
-        Even though online programming makes it possible to specify motion sequences very precisely, this type of robot programming is not useful or even possible for all applications. This concept makes it impossible, for example, to control the program flow beyond the movements, to process sensor data or to perform mathematical calculations. In addition, online programming requires time, which is a great disadvantage within a manufacturing process. Within this time, the robot is withdrawn from the process or possibly the whole process has to be stopped for this time. For such problems, concepts of offline programming are used. %(TODO Grundlagen der Robotik Seite 190-191)
+        Even though online programming makes it possible to specify motion sequences very precisely, this type of robot programming is not useful or even possible for all applications. This concept makes it impossible, for example, to control the program flow beyond the movements, to process sensor data or to perform mathematical calculations. In addition, online programming requires time, which is a great disadvantage within a manufacturing process. Within this time, the robot is withdrawn from the process or possibly the whole process has to be stopped for this time. For such problems, concepts of offline programming are used. \cite[pp. 190-191]{b4}%(Grundlagen der Robotik Seite 190-191)
 
 \section{Offline Concepts}
 
@@ -209,12 +207,12 @@ Commonly used examples of online concepts are Teach-in-Programming and Master-Sl
 \appendix
 
 \section{Appendix}
-    \begin{figure}[htbp!]
-        \centering
-        \includegraphics[scale=0.25]{./Moderne_Konzepte_Quellen/Citavi Attachments/statistic_id317178_global-industrial-robot-market-major-companies-by-market-share-2019.pdf}
-        \caption{Stastic about the market share of the biggest robot manufacturers in 2019 \cite{s1}}
-        \label{fig}
-    \end{figure}
+    % \begin{figure}[htbp!]
+    %     \centering
+    %     \includegraphics[scale=0.25]{./Moderne_Konzepte_Quellen/Citavi Attachments/statistic_id317178_global-industrial-robot-market-major-companies-by-market-share-2019.pdf}
+    %     \caption{Stastic about the market share of the biggest robot manufacturers in 2019 \cite{s1}}
+    %     \label{fig}
+    % \end{figure}
 
 \end{document}
 
