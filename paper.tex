@@ -85,15 +85,15 @@ Commonly used examples of online concepts are Teach-in-Programming and Master-Sl
 %general information about online concepts
 
     \subsection{Teach-in}
-        With Teach-in-Programming the programmer teaches the robot needed sequences of movements. Therefore, the programmer moves the robot via control elements or buttons, so the system can save the needed movements parameters like position, joint coordinates or the state of grippers and "learn". The movement of the robot can be controlled via consoles or so called "Teach Pendants", handheld programming devices. Usually, due to security, the movements are taught with decreased speed. Later on the program parameters like speed or accuracy can be adjusted to meet the needed specifications. Then the program can be executed automatically, in which the robot moves through all stored positions one after the other and thus executes the planned sequence of movements. \cite[pp. 187 - 188]{b4} %(" Seite 187-188)
+        With Teach-in-Programming the programmer teaches the robot needed sequences of movements. Therefore, the programmer moves the robot via control elements or buttons, so the system can save the needed movements parameters like position, joint coordinates or the state of grippers and "learn". The movement of the robot can be controlled via consoles or so called "Teach Pendants", handheld programming devices. Usually, due to security, the movements are taught with decreased speed. Later on the program parameters like speed or accuracy can be adjusted to attain the needed specifications. Then the program can be executed automatically, in which the robot moves through all stored positions sequentially and thus executes the planned sequence of movements. \cite[pp. 187 - 188]{b4} %(" Seite 187-188)
         Usually there are three forms of movements are distinguished:
         \begin{itemize}
             \item Point-to-Point
             \item Continuous Path
-            \item Muli-Point
+            \item Multi-Point
         \end{itemize}
 
-        Play-back programming is for example a special from of Teach-in-Programming commonly used for Multi-Point. In this the robot is programmed by demonstrating the movement by touch or hand guidance with switched off actuators. Then the robot stores the positions of the joints and interpolates a smooth path with the given points, which can then be traversed as it was shown. \cite[pp. 188 - 189]{b4}%(" Seite 188-189)
+        Play-back programming is for example a special form of Teach-in-Programming commonly used for Multi-Point. In this the robot is programmed by demonstrating the movement by touch or hand guidance with switched off actuators. Then the robot stores the positions of the joints and interpolates a smooth path with the given points, which can then be traversed as it was shown. \cite[pp. 188 - 189]{b4}%(" Seite 188-189)
 
     \subsection{Master-Slave}
         The Master-Slave-Concept gives the chance to program heavy robots via online programming without having to move them manually. To do this, the programmer needs two coupled robots, a small one that is easy to move and the heavy robot whose capabilities are to be programmed. The programmer moves the small robot, the so called Master. These movements are then copied from the so called Slave, the heavy robot. Because of the need of two coupled robots, this programming concept is usually expensive and therefore only used for teleoperations, so for places humans can not visit easily like underwater, irradiated areas or in space. Since the Slave robot is usually very far away, the current scenario of the Slave is usually transmitted to the operator of the Master by camera. Due to transmission delays, the Slave's environment may change faster than the programmer can track it via the camera. This makes accurate movement corrections very difficult. In such cases, special algorithms are used that estimate the future positions of the Slave to make a nearly synchronous control possible. \cite[p. 91]{b6}%(Robotik: Programmierung intelligenter Roboter Seite 91)
@@ -121,9 +121,9 @@ Commonly used examples of online concepts are Teach-in-Programming and Master-Sl
         This explicit programming approach is one of the oldest and most common programming concepts in robotics. \cite[p. 105]{b6}
 
         % what are problem solving languages?
-        A lot of programming languages used in robotics are problem-solving or implicit languages, which means, that they contain special commands for certain tasks the robot can perform. A basic example would be a command for moving the robot from one point to another. This is commonly done by giving the coordinates of the initial point, a target point and arguments for how to interpolate between those points as parameter to the command. The robot then calculates the path based on the parameters and moves accordingly. \cite[pp. 186 - 187]{b5}
+        A lot of programming languages used in robotics are problem-solving or implicit languages, which means, that they contain special commands for certain tasks the robot can perform. A basic example would be a command for moving the robot from one point to another. This is commonly done by giving the coordinates of the initial point, a target point and arguments for interpolating between those points as parameter to the command. The robot then calculates the path based on the parameters and moves accordingly. \cite[pp. 186 - 187]{b5}
                
-        Based on the 2019 market share of today's biggest robot manufacturers the most common languages used for text based programming are RAPID, KRL and KAREL. \cite{s1}
+        Based on the 2019 market share of today's biggest robot manufacturers the most common languages used for text based programming are RAPID, KRL and KAREL. \cite{s1} The market share can be seen in figure \ref{fig}.
 
         For those languages many programming environments exist. Examples based on the mentioned would be RobotStudio from ABB \cite{i1}, Officelite from KUKA \cite{i2} and ROBOGUIDE from FANUC \cite{i3}.
 
@@ -149,7 +149,7 @@ Commonly used examples of online concepts are Teach-in-Programming and Master-Sl
         CAD based programming environments offer a mathematical approach to the programming workflow by adding different models and CAD based tools.
         Models could range from simple models of movements to more complex simulation models of the environment and the robot itself.
         In addition to the pure simulation of mathematical models, graphical based programming environments add a time component to the simulation, making their simulation a 4D scene.
-        They contain a kind of 3D scene viewer and offer the features to simulate not only one robot and its movements but also the whole production environment. This allows the user to simulate the whole production process and interactions between different parts of the production environment. \cite[pp. 192 - 194]{b4}
+        They contain a kind of 3D scene viewer and offer features to simulate not only one robot and its movements but also the whole production environment. This allows the user to simulate the whole production process and interactions between different parts of the production environment. \cite[pp. 192 - 194]{b4}
 
         The already mentioned programming environment Visual Components is an example that also offers a graphical approach in its environment. \cite{i5}
 
@@ -174,13 +174,13 @@ Commonly used examples of online concepts are Teach-in-Programming and Master-Sl
         If the user is satisfied with the path the robot can be instructed to execute the path with a voice command.
         \cite[p. 2]{p3}
 
-        They found that the time needed to teach a robot using their AR based method was significantly shorter than with the traditional kinesthetic teaching approach. 
-        They also found that the average completion rate was significantly higher in a task containing movements where the path has to be made out of a high amount of distinct points, for example a sin. Using the AR method led to users placing more points on the path as it was easier to do so, resulting in better results in the sin movement.
+        They found that the time needed to teach a robot using their AR based method was significantly shorter than with the traditional teaching approach. 
+        They also found that the average completion rate was significantly higher in a task containing movements where the path has to be made out of a high amount of distinct points, for example a sine. Using the AR method led to users placing more points on the path as it was easier to do so, resulting in better results in the sine movement.
         \cite[pp. 4 - 5]{p3}
 
     \subsection{VR}
         Another new method of robot programming attempts to combine the advantages of online and offline concepts. The idea is to use Virtual Reality to define needed motion sequences offline via simulation without any effort for the programmer. Therefore, "the desired waypoints can be intuitively defined and checked in the virtual environment and stored through buttons and menus."  \cite[p. 625]{p2} For this purpose the programmer uses a VR headset which simulates a real environment and VR controllers to move freely within this simulation and to define the needed motion sequences for the robot. \cite[p. 627]{p2}
-        However, the simulation is not suitable for small changes in the motion path, which is why Online-Programming is still be needed. It allows a fine-tuning directly in the targeted manufacturing process. If further changes or updates are required, the program can be transferred back to offline simulation, which is a key advantage over traditional online programming as the robot does not need to be stopped within the process. \cite[p. 625]{p2}
+        However, the simulation is not suitable for small changes in the motion path, therefore Online-Programming is still needed. It allows a fine-tuning directly in the targeted manufacturing process. If further changes or updates are required, the program can be transferred back to offline simulation, which is a key advantage over traditional online programming as the robot does not need to be stopped within the process. \cite[p. 625]{p2}
 
 \section{Conclusion}
 
